@@ -1,0 +1,20 @@
+name: "🔗 Something's dead or wrong"
+description: "Dead link, wrong time, the org folded, it's not good anymore."
+title: "Dead or wrong: "
+labels: ["broken"]
+body:
+  - type: input
+    id: which
+    attributes:
+      label: Which entry?
+    validations: { required: true }
+  - type: dropdown
+    id: what
+    attributes:
+      label: What's wrong?
+      options: [Dead link, Wrong time or place, The org folded, It's just not good anymore, Other]
+    validations: { required: true }
+  - type: textarea
+    id: detail
+    attributes:
+      label: Correct info, if you have it

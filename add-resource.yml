@@ -1,0 +1,61 @@
+name: "➕ Add something that helped you"
+description: "A group, event, volunteer shift, or thing to do that made Austin easier."
+title: "Add: "
+labels: ["new resource"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for adding to the list. Two sentences of honesty beats a paragraph of description."
+  - type: input
+    id: name
+    attributes:
+      label: What is it?
+      placeholder: "Austin Bouldering Project"
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      placeholder: "https://..."
+    validations: { required: true }
+  - type: dropdown
+    id: bucket
+    attributes:
+      label: Which section?
+      options:
+        - Groups & communities
+        - Events
+        - Volunteering
+        - Career & jobs
+        - Things to do
+    validations: { required: true }
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost
+      options: [Free, Costs money, Some free / some paid]
+    validations: { required: true }
+  - type: input
+    id: when
+    attributes:
+      label: When does it happen?
+      placeholder: "Every Tuesday, 7pm — or 'anytime'"
+  - type: input
+    id: where
+    attributes:
+      label: Where?
+      placeholder: "East Austin — or 'online'"
+  - type: textarea
+    id: note
+    attributes:
+      label: How did it actually help you?
+      description: "The part Google can't tell anyone. Who's in the room? Can you show up alone? What do you do in the first five minutes? It's fine to say something isn't worth it."
+      placeholder: "I went alone and nobody made it weird. Mostly people in their 20s and 30s..."
+    validations: { required: true }
+  - type: input
+    id: by
+    attributes:
+      label: Sign it
+      description: "Your name gets shown next to the note. 'Anonymous' is fine too."
+      placeholder: "Sam, moved from Chicago in 2025"
+    validations: { required: true }

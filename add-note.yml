@@ -1,0 +1,26 @@
+name: "💬 Vouch for something already on the list"
+description: "You've been. Tell the next person what it's actually like."
+title: "Note: "
+labels: ["vouch"]
+body:
+  - type: markdown
+    attributes:
+      value: "Multiple notes on one entry are **good**. Two honest opinions beat one."
+  - type: input
+    id: which
+    attributes:
+      label: Which one?
+      placeholder: "Open Austin"
+    validations: { required: true }
+  - type: textarea
+    id: note
+    attributes:
+      label: What's it actually like?
+      description: "Who's in the room (age, seniority, vibe)? Is anyone selling anything? Can you go alone? What do you do in the first five minutes?"
+    validations: { required: true }
+  - type: input
+    id: by
+    attributes:
+      label: Sign it
+      placeholder: "Sam, moved from Chicago in 2025"
+    validations: { required: true }

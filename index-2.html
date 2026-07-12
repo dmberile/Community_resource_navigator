@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Things that helped me settle into Austin</title>
+<meta name="description" content="Groups, events, volunteering, and things to do that actually helped people who moved to Austin. Add the one that helped you." />
+<meta property="og:title" content="Things that helped me settle into Austin" />
+<meta property="og:description" content="A shared list of groups, events, volunteering, and things to do — each one vouched for by someone who actually went." />
+<style>
+  :root{
+    --ink:#1A1528; --paper:#FAF9F6; --violet:#6856D4; --violet-deep:#201B39;
+    --violet-light:#EDE9FA; --dusk:#9B8BE4; --amber:#C9780A; --amber-light:#FFF4E0;
+    --green:#2D7A50; --green-light:#E6F4EC; --line:#E4DFD4; --muted:#7A6B8A; --surface:#fff;
+    --display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --body:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  ::selection{background:#c5bef0;color:#1a1528}
+  .wrap{max-width:46rem;margin:0 auto;padding:0 20px 90px}
+
+  .hero{position:relative;width:100%;height:120px;overflow:hidden}
+  .hero .sky{position:absolute;inset:0;background:linear-gradient(175deg,var(--violet-deep) 0%,var(--violet) 50%,#A07FE0 78%,var(--amber) 100%)}
+  .hero svg{position:absolute;bottom:0;left:0;width:100%;height:80px}
+
+  .kicker{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);margin:30px 0 0}
+  h1{font-family:var(--display);font-weight:400;font-size:2.4rem;line-height:1.14;margin:10px 0 0}
+  .intro{line-height:1.7;margin:16px 0 0;max-width:34rem}
+  .intro em{color:var(--violet);font-style:normal;font-weight:600}
+  .stats{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+  .stat{font-size:.72rem;font-family:var(--mono);color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+  .stat b{color:var(--ink);font-weight:600}
+
+  .cta-top{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .btn{display:inline-block;font-family:var(--display);font-size:1rem;border-radius:11px;padding:11px 18px;text-decoration:none;cursor:pointer;border:0;transition:opacity .15s}
+  .btn:hover{opacity:.86}
+  .btn.primary{background:var(--violet);color:#fff}
+  .btn.ghost{background:transparent;border:1.5px solid var(--violet);color:var(--violet)}
+
+  .filters{position:sticky;top:0;z-index:5;background:var(--paper);padding:16px 0 12px;margin-top:30px;border-bottom:1px solid var(--line)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font:inherit;font-size:.83rem;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;cursor:pointer;transition:.13s}
+  .chip:hover{border-color:var(--dusk)}
+  .chip.on{background:var(--violet);border-color:var(--violet);color:#fff;font-weight:500}
+  .chip.toggle.on{background:var(--green);border-color:var(--green)}
+
+  h2.grp{font-family:var(--display);font-weight:400;font-size:1.4rem;color:var(--violet);margin:34px 0 0}
+  .grp-note{font-size:.85rem;color:var(--muted);margin:4px 0 0}
+  .stack{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+
+  .card{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:18px;scroll-margin-top:80px}
+  .card:target{border-color:var(--violet);box-shadow:0 0 0 3px var(--violet-light)}
+  .card .top{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+  .card a.name{font-weight:600;font-size:1.02rem;color:var(--ink);text-decoration:underline;text-decoration-color:var(--dusk);text-decoration-thickness:2px;text-underline-offset:3px}
+  .what{font-size:.9rem;line-height:1.55;margin:8px 0 0;color:var(--muted)}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin:9px 0 0;font-size:.78rem;color:var(--muted);font-family:var(--mono)}
+  .share{margin-left:auto;background:none;border:0;cursor:pointer;color:var(--muted);font-size:.75rem;font-family:var(--mono);padding:2px 6px;border-radius:6px}
+  .share:hover{background:var(--violet-light);color:var(--violet)}
+
+  .vouch{margin:12px 0 0;padding:13px 15px;border-radius:9px;background:var(--violet-light);font-size:.92rem;line-height:1.6}
+  .vouch + .vouch{margin-top:8px}
+  .vouch .by{display:block;margin-top:7px;font-size:.78rem;color:var(--violet);font-weight:600}
+  .empty{margin:12px 0 0;padding:13px 15px;border-radius:9px;border:1.5px dashed var(--line);font-size:.86rem;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+  .addnote{display:inline-block;margin-top:9px;font-size:.8rem;color:var(--violet);font-weight:600;text-decoration:none}
+  .addnote:hover{text-decoration:underline}
+  .empty a{color:var(--violet);font-weight:600;text-decoration:none;white-space:nowrap}
+  .empty a:hover{text-decoration:underline}
+
+  .tag{font-size:.7rem;font-weight:600;border-radius:999px;padding:2px 9px}
+  .tag.free{background:var(--green-light);color:var(--green)}
+  .tag.paid{background:var(--amber-light);color:var(--amber)}
+  .tag.mixed{background:#F5F3F8;color:var(--muted)}
+
+  .invite{background:var(--violet-deep);color:#fff;border-radius:16px;padding:26px;margin-top:44px}
+  .invite h2{font-family:var(--display);font-weight:400;font-size:1.6rem;margin:0}
+  .invite p{font-size:.94rem;line-height:1.65;color:#d6cff2;margin:12px 0 0}
+  .invite .btn.primary{background:#fff;color:var(--violet-deep);margin-top:18px;margin-right:8px}
+  .invite .btn.ghost{border-color:var(--dusk);color:#fff;margin-top:18px}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:18px}
+  footer p{font-size:.75rem;color:var(--muted);line-height:1.7;margin:0}
+  .none{color:var(--muted);font-size:.9rem;margin-top:24px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--violet-deep);color:#fff;padding:11px 20px;border-radius:999px;font-size:.85rem;transition:transform .22s;z-index:20}
+  .toast.on{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="hero" aria-hidden="true">
+  <div class="sky"></div>
+  <svg viewBox="0 0 900 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#fff" opacity=".55">
+      <circle cx="100" cy="8" r="1.2"/><circle cx="180" cy="4" r="1.2"/><circle cx="260" cy="12" r="1.2"/>
+      <circle cx="350" cy="6" r="1.2"/><circle cx="440" cy="3" r="1.2"/><circle cx="530" cy="10" r="1.2"/>
+      <circle cx="610" cy="5" r="1.2"/><circle cx="680" cy="13" r="1.2"/><circle cx="750" cy="4" r="1.2"/><circle cx="820" cy="9" r="1.2"/>
+    </g>
+    <path d="M0,90 L0,60 Q150,30 300,55 Q450,70 600,48 Q750,28 900,50 L900,90 Z" fill="#201B39" opacity=".55"/>
+    <g fill="#201B39">
+      <rect x="60" y="52" width="18" height="38"/><rect x="82" y="44" width="14" height="46"/>
+      <rect x="100" y="56" width="10" height="34"/><rect x="115" y="40" width="20" height="50"/><rect x="139" y="48" width="12" height="42"/>
+      <rect x="280" y="44" width="44" height="46"/><ellipse cx="302" cy="44" rx="22" ry="10"/><rect x="296" y="28" width="12" height="18"/>
+      <rect x="480" y="18" width="14" height="72"/><rect x="474" y="30" width="26" height="12"/><rect x="470" y="40" width="34" height="8"/>
+      <rect x="550" y="50" width="16" height="40"/><rect x="570" y="42" width="12" height="48"/><rect x="590" y="55" width="20" height="35"/>
+      <rect x="620" y="45" width="14" height="45"/><rect x="640" y="58" width="10" height="32"/>
+    </g>
+    <rect x="300" y="22" width="4" height="8" fill="#9B8BE4" opacity=".7"/>
+    <rect x="484" y="10" width="6" height="10" fill="#9B8BE4" opacity=".8"/>
+    <path d="M0,90 L0,74 Q200,58 450,66 Q700,72 900,62 L900,90 Z" fill="#FAF9F6"/>
+  </svg>
+</div>
+
+<main class="wrap">
+  <p class="kicker">Austin, Texas · a shared list</p>
+  <h1>Things that actually helped me settle into Austin.</h1>
+  <p class="intro" id="intro"></p>
+  <div class="stats" id="stats"></div>
+  <div class="cta-top">
+    <a class="btn primary" id="cta-add" href="#" target="_blank" rel="noopener">Add something that helped you</a>
+    <a class="btn ghost" id="cta-note" href="#" target="_blank" rel="noopener">Vouch for something here</a>
+  </div>
+
+  <div class="filters">
+    <div class="chips" id="filters"></div>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="invite">
+    <h2>Your turn.</h2>
+    <p>Every entry here is on the list because it helped somebody — and it says who. If a group, an event, a volunteer shift, or a random Tuesday thing made Austin feel less like a parking lot full of strangers, add it. Two sentences is plenty.</p>
+    <p>You don't have to add a whole new place, either. If you've been to one of these and have a different take, add your own note under it. Two honest opinions beat one.</p>
+    <a class="btn primary" id="cta-add2" href="#" target="_blank" rel="noopener">Add a resource</a>
+    <a class="btn ghost" id="cta-dead" href="#" target="_blank" rel="noopener">Something's dead or wrong</a>
+  </div>
+
+  <footer>
+    <p>Community-maintained, not sponsored, not affiliated with anything listed · links checked by hand, but times change — verify before you go · if something here is stale, that's a bug, please open an issue.</p>
+  </footer>
+</main>
+<div class="toast" id="toast">Link copied</div>
+
+<script>
+"use strict";
+
+/* ══════════════════════════════════════════════════════════════
+   1. CONFIG — set these two after you create the repo
+   ══════════════════════════════════════════════════════════════ */
+var REPO  = "https://github.com/YOUR-USERNAME/violet-crown";
+var INTRO = "I moved here not knowing anybody. These are the groups, events, volunteer shifts, and " +
+            "things to do that actually got me un-stuck — each one with a note from the person who went. " +
+            "<em>If something here helped you, or something's missing, add it.</em> That's the whole idea.";
+
+/* ══════════════════════════════════════════════════════════════
+   2. THE LIST
+
+   vouches: []                          → shows "nobody's vouched yet"
+   vouches: [{by:"...", note:"..."}]    → shows a signed note (as many as you like)
+
+   A good note answers what a Google search can't:
+     who's in the room · is anyone selling anything · can you show up alone
+     · what do you do in the first five minutes
+   ══════════════════════════════════════════════════════════════ */
+
+var LIST = [
+
+  /* ───── GROUPS ───── */
+  {id:"austin-forum", bucket:"groups", cost:"free",
+   name:"Austin Forum on Technology & Society",
+   url:"https://www.austinforum.org/events",
+   when:"2nd Tuesday monthly, 6:15pm", where:"ACC Rio Grande, downtown",
+   what:"Longest-running monthly tech event in the city — a talk, then networking. Also runs book discussions and a public Slack.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"awt", bucket:"groups", cost:"mixed",
+   name:"Austin Women in Technology (AWT)",
+   url:"https://awtaustin.org/",
+   when:"Monthly events + annual mentorship cohort", where:"Around Austin, some virtual",
+   what:"Going since 1992. Monthly events (recent: Women in AI panel, salary-negotiation workshop), a real mentorship program, and a members' hiring database. Open to anyone who supports the mission.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"bashh", bucket:"groups", cost:"free",
+   name:"BASHH (Big Ass Social Happy Hour)",
+   url:"https://theamericangenius.com/bashh/",
+   when:"Recurring — check the site", where:"Rotates around Austin",
+   what:"Austin's long-running casual tech networking night. No speakers, no agenda, no pitches. Not a job fair, though people get hired there.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"capital-factory", bucket:"groups", cost:"mixed",
+   name:"Capital Factory",
+   url:"https://capitalfactory.com/events",
+   when:"Something most weeks", where:"Downtown",
+   what:"The gravitational center of Texas startups. Constant public calendar — pitch days, meetups, summits. Plenty of it is free.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"station-austin", bucket:"groups", cost:"paid",
+   name:"STATION Austin",
+   url:"https://capitalfactory.com/company-overview/",
+   when:"Community meetups most nights", where:"Downtown",
+   what:"Capital Factory's nonprofit spin-off (launched March 2026), now running Austin Tech Week, CF House at SXSW, and the Supernova events. Membership starts at $250/month — real money early in a career. Go to the free stuff first.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"meetup", bucket:"groups", cost:"free",
+   name:"Meetup — Austin tech groups",
+   url:"https://www.meetup.com/find/?location=us--tx--Austin&keywords=technology",
+   when:"Nightly, somewhere", where:"All over",
+   what:"Still where the language- and tool-specific groups live (JS, Python, data, AI, security). Quality varies wildly — join three, keep the one that actually meets.",
+   vouches:[], verified:"2026-07-11"},
+
+  /* ───── EVENTS ───── */
+  {id:"austin-tech-week", bucket:"events", cost:"mixed",
+   name:"Austin Tech Week",
+   url:"https://www.austintech.com/",
+   when:"Oct 26–30, 2026", where:"Across the city",
+   what:"The evolution of Austin Startup Week (running since 2011). Five days, thousands of founders and operators, and the Startup Crawl. The densest networking week of the year.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"sxsw", bucket:"events", cost:"paid",
+   name:"SXSW",
+   url:"https://www.sxsw.com/",
+   when:"March, annually", where:"Downtown, everywhere",
+   what:"The big one. Badges are expensive, and a lot of the value is in the free unofficial panels, parties, and side events you can do without one.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"startup-weekend", bucket:"events", cost:"paid",
+   name:"Techstars Startup Weekend Austin",
+   url:"https://startupweekendaustin.com/",
+   when:"Periodically — Fri to Sun", where:"Capital Factory",
+   what:"Form a team with strangers Friday, build and validate something, pitch Sunday. Mentors on site, food included. You leave with a shipped thing and ~30 contacts.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"blues-green", bucket:"events", cost:"free",
+   name:"Blues on the Green",
+   url:"https://www.austinparks.org/",
+   when:"Summer evenings", where:"Zilker Park",
+   what:"Free outdoor concert series. Bring a blanket. The easiest possible thing to invite a brand-new acquaintance to — zero pressure, zero cost.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"eventbrite", bucket:"events", cost:"mixed",
+   name:"Eventbrite — Austin",
+   url:"https://www.eventbrite.com/d/tx--austin/technology/",
+   when:"Ongoing", where:"Online",
+   what:"Where most local workshops and conferences actually sell tickets, including the Austin Forum. Save a search and let the emails do the work.",
+   vouches:[], verified:"2026-07-11"},
+
+  /* ───── VOLUNTEERING ───── */
+  {id:"open-austin", bucket:"volunteer", cost:"free",
+   name:"Open Austin",
+   url:"https://www.open-austin.org/",
+   when:"Monthly orientation call + ongoing projects", where:"Remote + in person",
+   what:"Civic-tech nonprofit and Code for America brigade. Volunteers build real open-source tools with government and nonprofit partners — tenant-rights mapping, transit data, library UX. Runs a Civic Data Fellowship pairing new analysts with mentors. Non-developers welcome. You leave with portfolio-ready work, which is rare for volunteering.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"food-bank", bucket:"volunteer", cost:"free",
+   name:"Central Texas Food Bank",
+   url:"https://www.centraltexasfoodbank.org/volunteer",
+   when:"Shifts most days", where:"Southeast Austin",
+   what:"Big, well-run shifts you can book solo online. The classic do-good-meet-people move, and the easiest one to say yes to on a Saturday.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"apa", bucket:"volunteer", cost:"free",
+   name:"Austin Pets Alive!",
+   url:"https://www.austinpetsalive.org/volunteer",
+   when:"Ongoing shifts", where:"Central / Town Lake",
+   what:"The no-kill shelter. Dog-walking shifts get you exercise, dogs, and people in a single move. Requires an orientation first.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"habitat", bucket:"volunteer", cost:"free",
+   name:"Austin Habitat for Humanity",
+   url:"https://austinhabitat.org/volunteer/",
+   when:"Build days + ReStore shifts", where:"Various",
+   what:"No construction experience needed. A whole crew works together for hours, which makes it unusually social for volunteering.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"kab", bucket:"volunteer", cost:"free",
+   name:"Keep Austin Beautiful",
+   url:"https://keepaustinbeautiful.org/volunteer/",
+   when:"Weekend events, monthly-ish", where:"All over",
+   what:"Litter cleanups, tree plantings, creek restoration. Zero commitment, show up once, outdoors.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"volunteermatch", bucket:"volunteer", cost:"free",
+   name:"VolunteerMatch — Austin",
+   url:"https://www.volunteermatch.org/search/?l=Austin%2C+TX",
+   when:"Anytime", where:"Online index",
+   what:"Searchable by cause, date, and virtual vs in-person. Start here if you don't know what you want to do yet.",
+   vouches:[], verified:"2026-07-11"},
+
+  /* ───── CAREER ───── */
+  {id:"built-in", bucket:"career", cost:"free",
+   name:"Built In Austin",
+   url:"https://builtin.com/austin",
+   when:"Anytime", where:"Online",
+   what:"The default Austin tech job board, plus company profiles that tell you who's actually headquartered here versus posting ghost roles.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"dress-for-success", bucket:"career", cost:"free",
+   name:"Dress for Success Austin",
+   url:"https://www.dressforsuccessaustin.org/services",
+   when:"In-person Tue & Thu 10–4; virtual by appointment", where:"South Austin",
+   what:"Free career support for women: resume and LinkedIn help, mock interviews, a six-week career-readiness course with a matched mentor, and two full professional outfits. They dropped the referral requirement in 2017 — no income test, any woman 16+, free as long as you need it. Almost nobody knows that. They take volunteers too.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"atc", bucket:"career", cost:"mixed",
+   name:"Austin Technology Council",
+   url:"https://www.austintechnologycouncil.org/",
+   when:"Year-round; Gateway Happy Hour before SXSW", where:"Downtown",
+   what:"The industry association for Austin tech companies. You don't need a membership to attend the public events.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"linkedin-events", bucket:"career", cost:"free",
+   name:"LinkedIn Events — Austin",
+   url:"https://www.linkedin.com/events/",
+   when:"Weekly", where:"Online + local",
+   what:"Where recruiter-hosted panels and company open houses get posted first. Register for ones hosted by companies you'd work at — the host is usually in the room.",
+   vouches:[], verified:"2026-07-11"},
+
+  /* ───── THINGS TO DO ───── */
+  {id:"barton-springs", bucket:"todo", cost:"paid",
+   name:"Barton Springs Pool",
+   url:"https://www.austintexas.gov/department/barton-springs-pool",
+   when:"Year-round", where:"Zilker",
+   what:"68°F spring-fed pool, the spiritual center of the city. Go once and Austin makes more sense.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"butler-trail", bucket:"todo", cost:"free",
+   name:"Ann & Roy Butler Trail",
+   url:"https://thetrailconservancy.org/",
+   when:"Always", where:"Lady Bird Lake, downtown",
+   what:"10-mile loop where the whole city walks and runs. Free, always on, and the cheapest way to feel like you live here.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"apl", bucket:"todo", cost:"free",
+   name:"Austin Public Library",
+   url:"https://library.austintexas.gov/",
+   when:"Anytime", where:"Central Library + branches",
+   what:"A free card gets you online learning licenses, free classes, and coworking-grade space. The Central Library is also just one of the best buildings in Texas.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"do512", bucket:"todo", cost:"free",
+   name:"Do512",
+   url:"https://do512.com/",
+   when:"Daily", where:"Online",
+   what:"The events calendar locals actually use. Subscribe to the newsletter and your weekends fill themselves.",
+   vouches:[], verified:"2026-07-11"},
+
+  {id:"r-austin", bucket:"todo", cost:"free",
+   name:"r/Austin",
+   url:"https://www.reddit.com/r/Austin/",
+   when:"Always on", where:"Online",
+   what:"The city's group chat. Every newcomer question already has a thread with a better answer than you'd get by asking.",
+   vouches:[], verified:"2026-07-11"}
+];
+
+var BUCKETS = [
+  {id:"groups",    title:"Groups & communities", note:"Recurring. You can walk in alone."},
+  {id:"events",    title:"Events",               note:"Put one on the calendar. That's the whole trick."},
+  {id:"volunteer", title:"Volunteering",         note:"The fastest way to meet people who aren't in your industry."},
+  {id:"career",    title:"Career & jobs",        note:"Where the work and the people who hire for it are."},
+  {id:"todo",      title:"Things to do",         note:"Because you need a life outside the job."}
+];
+
+/* ══════════════════════════════════════════════════════════════
+   3. VIEW — you shouldn't need to touch anything below here
+   ══════════════════════════════════════════════════════════════ */
+
+var state = {bucket:"all", freeOnly:false, vouchedOnly:false};
+var esc = function(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); };
+var issue = function(t,b){ return REPO + "/issues/new?title=" + encodeURIComponent(t) + "&body=" + encodeURIComponent(b); };
+
+var ADD_BODY =
+  "**What is it:**\n**Link:**\n**Which section:** groups / events / volunteering / career / things to do\n" +
+  "**Cost:**\n**When & where:**\n\n**How it helped you** (2 sentences is plenty — who's in the room, " +
+  "can you show up alone, what do you do in the first five minutes):\n\n**Sign it** (name + when you moved here, " +
+  "or 'anonymous'):\n";
+var NOTE_BODY = function(name){
+  return "**Which one:** " + (name || "") + "\n\n**Your note** (who's in the room, is anyone selling anything, " +
+    "can you go alone, what to do in the first five minutes):\n\n**Sign it** (name + when you moved here, " +
+    "or 'anonymous'):\n";
+};
+
+function costTag(c){
+  var m = {free:["free","free"], paid:["costs money","paid"], mixed:["some free","mixed"]}[c] || ["some free","mixed"];
+  return '<span class="tag ' + m[1] + '">' + m[0] + '</span>';
+}
+
+function card(p){
+  var body = p.vouches.length
+    ? p.vouches.map(function(v){
+        return '<div class="vouch">' + esc(v.note) + '<span class="by">— ' + esc(v.by) + '</span></div>';
+      }).join("") +
+      '<a class="addnote" href="' + issue("Note: " + p.name, NOTE_BODY(p.name)) + '" target="_blank" rel="noopener">+ add your take</a>'
+    : '<div class="empty"><span>Nobody has vouched for this yet.</span>' +
+      '<a href="' + issue("Note: " + p.name, NOTE_BODY(p.name)) + '" target="_blank" rel="noopener">Did it help you? Say so →</a></div>';
+
+  return '<div class="card" id="' + p.id + '">' +
+    '<div class="top">' +
+      '<a class="name" href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.name) + '</a>' +
+      costTag(p.cost) +
+      '<button class="share" data-share="' + p.id + '" title="Copy a link to just this one">↗ share</button>' +
+    '</div>' +
+    '<p class="what">' + esc(p.what) + '</p>' +
+    '<div class="facts"><span>◷ ' + esc(p.when) + '</span><span>⌖ ' + esc(p.where) + '</span></div>' +
+    body +
+  '</div>';
+}
+
+function render(){
+  var vouched = LIST.filter(function(p){ return p.vouches.length; });
+  var people = {};
+  LIST.forEach(function(p){ p.vouches.forEach(function(v){ people[v.by] = 1; }); });
+
+  document.getElementById("intro").innerHTML = INTRO;
+  document.getElementById("stats").innerHTML =
+    '<span class="stat"><b>' + LIST.length + '</b> resources</span>' +
+    '<span class="stat"><b>' + vouched.length + '</b> vouched for</span>' +
+    '<span class="stat"><b>' + Object.keys(people).length + '</b> people have contributed</span>' +
+    '<span class="stat">links checked <b>Jul 2026</b></span>';
+
+  var f = [{id:"all", title:"Everything"}].concat(BUCKETS);
+  document.getElementById("filters").innerHTML =
+    f.map(function(b){
+      return '<button class="chip' + (state.bucket === b.id ? " on" : "") + '" data-b="' + b.id + '">' + b.title + '</button>';
+    }).join("") +
+    '<button class="chip toggle' + (state.freeOnly ? " on" : "") + '" data-t="freeOnly">free only</button>' +
+    '<button class="chip toggle' + (state.vouchedOnly ? " on" : "") + '" data-t="vouchedOnly">vouched only</button>';
+
+  var shown = LIST.filter(function(p){
+    if (state.bucket !== "all" && p.bucket !== state.bucket) return false;
+    if (state.freeOnly && p.cost === "paid") return false;
+    if (state.vouchedOnly && !p.vouches.length) return false;
+    return true;
+  });
+
+  document.getElementById("list").innerHTML = BUCKETS.map(function(b){
+    var items = shown.filter(function(p){ return p.bucket === b.id; });
+    if (!items.length) return "";
+    return '<h2 class="grp">' + b.title + '</h2><p class="grp-note">' + b.note + '</p>' +
+      '<div class="stack">' + items.map(card).join("") + '</div>';
+  }).join("") || '<p class="none">Nothing here yet — which means it\'s a gap. <a href="' + issue("Add: ", ADD_BODY) + '" target="_blank" rel="noopener">Add the first one.</a></p>';
+}
+
+function toast(msg){
+  var t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("on");
+  setTimeout(function(){ t.classList.remove("on"); }, 1800);
+}
+
+document.getElementById("filters").addEventListener("click", function(e){
+  var el = e.target.closest("button");
+  if (!el) return;
+  if (el.dataset.b){ state.bucket = el.dataset.b; history.replaceState(null,"", el.dataset.b === "all" ? location.pathname : "#/" + el.dataset.b); }
+  if (el.dataset.t) state[el.dataset.t] = !state[el.dataset.t];
+  render();
+});
+
+document.getElementById("list").addEventListener("click", function(e){
+  var b = e.target.closest("[data-share]");
+  if (!b) return;
+  var link = location.origin + location.pathname + "#" + b.dataset.share;
+  if (navigator.clipboard) navigator.clipboard.writeText(link).then(function(){ toast("Link copied — go paste it somewhere"); });
+  else { location.hash = b.dataset.share; toast("Copy the URL from your address bar"); }
+});
+
+["cta-add","cta-add2"].forEach(function(id){ document.getElementById(id).href = issue("Add: ", ADD_BODY); });
+document.getElementById("cta-note").href = issue("Note: ", NOTE_BODY(""));
+document.getElementById("cta-dead").href = issue("Dead or wrong: ", "**Which entry:**\n**What's wrong:** (dead link / wrong time / it folded / it's not good anymore)\n**Correct info if you have it:**\n");
+
+/* shareable filter views: violet-crown/#/volunteer */
+var h = location.hash;
+if (h.indexOf("#/") === 0){
+  var b = h.slice(2);
+  if (BUCKETS.some(function(x){ return x.id === b; })) state.bucket = b;
+}
+render();
+if (h && h.indexOf("#/") !== 0){
+  var el = document.getElementById(h.slice(1));
+  if (el) el.scrollIntoView();
+}
+</script>
+</body>
+</html>
